@@ -14,7 +14,7 @@ $this->title = 'My Yii Application';
                 <h2>Админка</h2>
 
                 <p>Админка находится по адресу
-                    <?= \yii\helpers\Html::a($host.'/admin',[$host.'/admin'])?>
+                    <a href="<?= $host.'/admin'?>"><?= $host.'/admin'?></a>
                     <br>
                     В админке существует возможность добавления городов и промокодов.
                 </p>
@@ -26,13 +26,15 @@ $this->title = 'My Yii Application';
                     <br>
                     Получение информации промокода.
                     <br>
-                    GET <?= \yii\helpers\Html::a($host.'/v1/discount', $host.'/v1/discount', ['target' => '_blank', 'rel' => 'nofollow'])?>
+                    GET
+                    <a href="<?= $host.'/v1/discount'?>"><?= $host.'/v1/discount'?></a>
                     <br>
                     Обязательный параметр в запросе: name - наименование промокода.
                     <br>
                     Активация промокода.
                     <br>
-                    PUT <?= \yii\helpers\Html::a($host.'/v1/discount/activate', $host.'/v1/discount/activate', ['target' => '_blank', 'rel' => 'nofollow'])?>
+                    PUT
+                    <a href="<?= $host.'/v1/discount/activate'?>"><?= $host.'/v1/discount/activate'?></a>
                     <br>
                     Обязательный параметр: name - наименование промокода, city - намименование города
                 </p>
