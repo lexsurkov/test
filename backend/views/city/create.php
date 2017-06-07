@@ -11,8 +11,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\City */
 
-$this->title = $model->isNewRecord ? 'Add City' : 'Update city';
-$this->params['breadcrumbs'][] = ['label' => 'City', 'url'=> ['index']];
+$this->title = $model->isNewRecord ? 'Добавить город' : 'Обновить город';
+$this->params['breadcrumbs'][] = ['label' => 'Города', 'url'=> ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

@@ -12,13 +12,13 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\search\CitySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'City';
+$this->title = 'Города';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
 <p>
-    <?= Html::a('Add City', ['create'], ['class' => 'btn btn-success']) ?>
+    <?= Html::a('Добавить город', ['create'], ['class' => 'btn btn-success']) ?>
 </p>
 
 <?= GridView::widget([

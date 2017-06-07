@@ -44,7 +44,8 @@ class City extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'name'    => 'Name',
+            'id'   => '№',
+            'name' => 'Наименование',
         ];
     }
 
