@@ -1,0 +1,21 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^mytest.ru$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.mytest.ru$
+
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^api/assets/(.*)$ restapi/web/assets/$1 [L]
+RewriteRule ^api/css/(.*)$ restapi/web/css/$1 [L]
+RewriteCond %{REQUEST_URI} !^/restapi/web/(assets|css)/
+RewriteCond %{REQUEST_URI} ^/(api)
+RewriteRule ^.*$ restapi/web/index.php [L]
+
+RewriteCond %{REQUEST_URI} ^/(admin)
+RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+RewriteRule ^admin/img/(.*)$ backend/web/img/$1 [L]
+RewriteCond %{REQUEST_URI} !^/backend/web/(assets|img|css)/
+RewriteCond %{REQUEST_URI} ^/(admin)
+RewriteRule ^.*$ backend/web/index.php [L]
+
+RewriteCond %{REQUEST_URI} !frontend/web/
+RewriteRule (.*) /frontend/web/$1 [L]
